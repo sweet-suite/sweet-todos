@@ -31,15 +31,16 @@
                 <h2 class="text-6xl -mt-24 text-white">
                     features
                 </h2>
-                <div class="mt-8">
-                    <div class="shadow-inner border rounded-md p-4">1</div>
+                <FeaturesSection />
+                <!-- <div class="mt-8 relative">
+                    <div class="shadow-inner rounded-md p-4 h-40 bg-rose-800"></div>
                     <div class="flex gap-4 mt-4">
-                        <div class="shadow-inner border rounded-md p-4 flex-1">2.1</div>
-                        <div class="shadow-inner border rounded-md p-4 flex-1">2.1</div>
-                        <div class="shadow-inner border rounded-md p-4 flex-1">2.1</div>
+                        <pane />
+                        <div class="shadow-inner rounded-md p-4 flex-1 bg-rose-800 transition transform"></div>
+                        <div class="shadow-inner rounded-md p-4 flex-1 bg-rose-800"></div>
                     </div>
-                    <div class="shadow-inner border rounded-md p-4 mt-4">1</div>
-                </div>
+                    <div class="shadow-inner rounded-md p-4 mt-4 bg-rose-800 h-28"></div>
+                </div> -->
             </div>
         </div>
         <div class="py-24 pt-44" id="contributing">
@@ -59,10 +60,11 @@
             </div>
         </div>
         <div class="py-24 pt-44" id="other-apps">
-            <div class="">
-                <h2 class="text-6xl -mt-24 text-white">
-                    other apps
-                </h2>
+            <h2 class="text-6xl -mt-24 text-white">
+                other apps
+            </h2>
+            <AppsSection />
+            <!-- <div class="">
                 <div class="text-2xl text-rose-200 mt-2">some text goes here</div>
                 <div class="mt-8">
                     <div class="flex">
@@ -72,13 +74,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+    middleware: 'remove-hash'
+})
 </script>
 
 <style scoped>

@@ -5,9 +5,17 @@ export default defineNuxtConfig({
     ],
     routeRules: {
         '/app/**': { ssr: false },
-        '/': { ssr: false },
+        // '/': { ssr: false },
     },
     app: {
-        pageTransition: { name: 'page', mode: 'out-in' }
+        pageTransition: { name: 'page', mode: 'out-in' },
     },
+    nitro: {
+        preset: 'netlify'
+    },
+    imports: {
+        imports: [
+            { as: 'zod', from: 'zod' }
+        ]
+    }
 })

@@ -12,9 +12,9 @@ const props = defineProps<{
 }>()
 
 const route = useRoute()
-const doesMatch = computed(() => route.hash === props.to)
-console.log("route", route)
-// const doesMatch = computed(() => route.)
+const doesMatch = computed(() =>
+    `/${route.hash}` === props.to
+)
 </script>
 
 <style scoped>
